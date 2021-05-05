@@ -1,3 +1,4 @@
 {
-    "mongoURI":"mongodb+srv://marsden:madoka98@cluster0.ewzaf.mongodb.net/SocialMediaApp?retryWrites=true&w=majority"
+    "mongoURI":"mongodb+srv://marsden:madoka98@cluster0.ewzaf.mongodb.net/SocialMediaApp?retryWrites=true&w=majority",
+     "jwtSecret":"mysecrettoken"
 }
