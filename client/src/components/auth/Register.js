@@ -96,7 +96,7 @@ Register.propTypes = {
   //must define the type of function from actions
   setAlert: PropTypes.func.isRequired, //ptfr
   register: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool,
+  isAuthenticated: PropTypes.bool
 };
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
