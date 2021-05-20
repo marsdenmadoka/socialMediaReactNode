@@ -129,7 +129,7 @@ router.put("/like/:id", auth, async (req, res) => {
 //@route PUT api/post/unlike/:postid
 //@desc UNLIKE A post
 //@access private
-router.put("/like/:id", auth, async (req, res) => {
+router.put("/unlike/:id", auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
 
