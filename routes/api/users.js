@@ -46,6 +46,7 @@ router.post(
         email,
         avatar,
         password,
+        geometry,
       });
       //Encrypt password
       const salt = await bcrypt.genSalt(10);

@@ -340,3 +340,31 @@ router.get("/github/:username", (req, res) => {
 
 module.exports = router;
 //npm run server
+
+// //@route GET api/profile/follow
+// //@desc follow 
+// //@access Public
+
+// router.post('/follow',auth, async (req,res)=>{
+// try {
+ 
+  
+// } catch (err) {
+//   res.status(500).send("server Error")
+// }
+
+// })
+
+// //@route GET api/profile/unfollow/:id
+// //@desc follow 
+// //@access Public
+
+// router.post('/follow/:id',auth, async (req,res)=>{
+// try {
+  
+// } catch (err) {
+//   res.status(500).send("server Error")
+// }
+
+// })
+

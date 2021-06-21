@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Moment from "react-moment";
 import { deleteEducation } from '../../actions/profile'
-
+//
 
 const Education = ({ education,deleteEducation }) => { //this props comes from the parent component Dashboard
   const educations = education.map((edu) => (

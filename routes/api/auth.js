@@ -9,9 +9,8 @@ const auth = require("../../middleware/auth");
 const User = require("../../models/User");
 
 //@route GET api/auth
-//@desc  Get User
-//@access private
-
+//@desc  Get User //Getting current user
+//@access private 
 router.get("/", auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("-password");
@@ -57,6 +56,7 @@ router.post(
       const payload = {
         user: {
           id: user.id,
+          //isAdmin:user.isAdmin
         },
       };
       jwt.sign(

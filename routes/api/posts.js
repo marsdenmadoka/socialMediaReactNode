@@ -23,13 +23,13 @@ router.post(
       const user = await User.findById(req.user.id).select("-password");
 
       const newPost = new Post({
-        text: req.body.text,
-        name: user.name,
-        avatar: user.avatar,
-        user: req.user.id,
+        text: req.body.text,//comes from our Post model
+        name: user.name,//comes from our user model/collection
+        avatar: user.avatar,//comes from our user model/collection
+        user: req.user.id,//comes from our user model/collection
       });
 
-      const post = await newPost.save();
+      const post = await newPost.save();//save in our post collection
       res.json(post);
     } catch (err) {
       console.error(err.message);

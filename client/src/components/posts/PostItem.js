@@ -6,13 +6,26 @@ import Moment from "react-moment";
 import { addLike, removeLike, deletePost } from "../../actions/post";
 
 const PostItem = ({
-  addLike,
-  removeLike,
   deletePost,
   auth,
   post: { _id, text, name, avatar, user, likes, comments, date },
+  addLike,
+  removeLike,
   showActions, // showActions since we want to reuse this compone with post/Post.js
 }) => {
+  // const monitor => {
+  //   addLike(_id);
+  //   removeLike(_id);
+  // };
+  // useEffect(() => {
+  //   monitor();
+  // }, [likes]);
+
+  useEffect(() => {
+    addLike(_id);
+    removeLike(_id);
+  },[likes]);
+
   return (
     <div class="post bg-white p-1 my-1">
       <div>
@@ -66,9 +79,9 @@ const PostItem = ({
   );
 };
 
-PostItem.defaultProps ={
-    showActions:true
-}
+PostItem.defaultProps = {
+  showActions: true,
+};
 PostItem.propTypes = {
   post: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
